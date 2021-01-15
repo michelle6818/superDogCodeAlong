@@ -1,6 +1,7 @@
 //Wire up an event handler for the btnPerson button
 document.getElementById("btnPerson").addEventListener("click", CreatePerson);
 
+// {} are the start of declaring an object in JS
 function CreatePerson(){
     //Step 1: Get all the user data
     let fName = document.getElementById("firstName").value;
@@ -9,20 +10,14 @@ function CreatePerson(){
     let hairColor = document.getElementById("hairColor").value;
     let eyeColor = document.getElementById("eyeColor").value;
     
-    //Step 2: Use the user data to create a Person Object
-    // let person = {
-    //     FirstName: "Jason",
-    //     LastName: "Twichell",
-    //     age: 47,
-    //     hairColor: "brown",
-    //     eyeColor: "blue"
-    // };
+
     let person = {
         FirstName: fName,
         LastName: lName,
         Age: age,
         HairColor: hairColor,
         EyeColor: eyeColor,
+        // the following is a property working as a function
         FullName: function() {
             return `${this.FirstName} ${this.LastName}`;
         },
